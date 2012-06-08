@@ -1,0 +1,80 @@
+Sam's Page 
+
+Pages 
+  Home 
+  Gallery
+  Credits 
+  Contact
+
+Refinery
+
+  Getting in and out of the app via the browser
+  
+  Users are stored in the DB their associated passwords are encrypted use SQLite3 tool to open refinery_users
+  eVxAdmin ===>> eVxCMS
+  SamIam ====>>> Samsa
+  
+  No it's not like the process of creating!!!!!!!!!!!!!
+    remember the help file. 
+  
+  http://localhost:3000/refinery/users/register
+http://localhost:3000/refinery/users/login
+  
+  /app/assets/images/image.png
+  
+  Getting Dragofly to upload a picture 
+    first put the picture in the images folder and try and get it from there 
+    if Dragofly no-go then Html background photo approach temp
+    
+ERROR #################
+
+  Dragonfly::Shell::CommandFailed in Refinery::Admin::ImagesController#create
+
+Command failed (identify '/tmp/RackMultipart20120606-5204-1bnsech') with exit status 127
+Rails.root: /home/evx001/xXx/eVxCMS
+
+Application Trace | Framework Trace | Full Trace
+Request
+
+Parameters:
+
+{"utf8"=>"✓",
+ "authenticity_token"=>"PF3POQUTHjjZWX3gcQaE0OZBgWSUAJ/Iig1aaBEz2wc=",
+ "image"=>{"image"=>[#<ActionDispatch::Http::UploadedFile:0xb44c374 @original_filename="10A.jpg",
+ @content_type="image/jpeg",
+ @headers="Content-Disposition: form-data; name=\"image[image][]\"; filename=\"10A.jpg\"\r\nContent-Type: image/jpeg\r\n",
+ @tempfile=#<File:/tmp/RackMultipart20120606-5204-1bnsech (closed)>>]},
+ "wymeditor"=>"true",
+ "modal"=>"true",
+ "dialog"=>"true",
+ "insert"=>"true",
+ "locale"=>:en}
+Show session dump
+
+Show env dump
+
+Response
+
+Headers:
+None
+
+
+config/initializers/refinery/images.rb:  # Configures the maximum allowed upload size (in bytes) for an image
+config/initializers/refinery/resources.rb:  # Configures the maximum allowed upload size (in bytes) for a file upload
+
+evx001@evx001-VirtlBox:~/xXx/eVxCMS$ rails generate controller images
+      create  app/controllers/images_controller.rb
+      invoke  erb
+      create    app/views/images
+      invoke  test_unit
+      create    test/functional/images_controller_test.rb
+      invoke  helper
+      create    app/helpers/images_helper.rb
+      invoke    test_unit
+      create      test/unit/helpers/images_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/images.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/images.css.scss
+evx001@evx001-VirtlBox:~/xXx/eVxCMS$ 
