@@ -1,0 +1,170 @@
+$ sudo apt-get install curl
+
+curl -L get.rvm.io | bash -s stable
+
+
+source /home/evx/.rvm/scripts/rvm
+
+rvm requirements
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+evx@evx-VirtualBox:~$ sudo curl -L get.rvm.io | bash -s stable
+[sudo] password for evx: 
+sudo: curl: command not found
+evx@evx-VirtualBox:~$ curl -L get.rvm.io | bash -s stable
+The program 'curl' is currently not installed.  You can install it by typing:
+sudo apt-get install curl
+evx@evx-VirtualBox:~$ sudo apt-get install curl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  language-pack-zh-hans language-pack-kde-en language-pack-kde-zh-hans language-pack-kde-en-base
+  kde-l10n-engb kde-l10n-zhcn language-pack-zh-hans-base firefox-locale-zh-hans
+  language-pack-kde-zh-hans-base
+Use 'apt-get autoremove' to remove them.
+The following NEW packages will be installed:
+  curl
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 137 kB of archives.
+After this operation, 346 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main curl i386 7.22.0-3ubuntu4 [137 kB]
+Fetched 137 kB in 0s (716 kB/s)
+Selecting previously unselected package curl.
+(Reading database ... 187441 files and directories currently installed.)
+Unpacking curl (from .../curl_7.22.0-3ubuntu4_i386.deb) ...
+Processing triggers for man-db ...
+Setting up curl (7.22.0-3ubuntu4) ...
+evx@evx-VirtualBox:~$ curl -L get.rvm.io | bash -s stable
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   185  100   185    0     0    441      0 --:--:-- --:--:-- --:--:--  2228
+100  9249  100  9249    0     0  13321      0 --:--:-- --:--:-- --:--:--     0
+Downloading RVM from wayneeseguin branch stable
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   125  100   125    0     0    544      0 --:--:-- --:--:-- --:--:--  1008
+100 1045k  100 1045k    0     0   966k      0  0:00:01  0:00:01 --:--:-- 2127k
+
+Installing RVM to /home/evx/.rvm/
+    Adding rvm PATH line to /home/evx/.bashrc /home/evx/.zshrc.
+    Adding rvm loading line to /home/evx/.bash_login /home/evx/.zlogin.
+
+# RVM:  Shell scripts enabling management of multiple ruby environments.
+# RTFM: https://rvm.io/
+# HELP: http://webchat.freenode.net/?channels=rvm (#rvm on irc.freenode.net)
+# Cheatsheet: http://cheat.errtheblog.com/s/rvm/
+# Screencast: http://screencasts.org/episodes/how-to-use-rvm
+
+# In case of any issues read output of 'rvm requirements' and/or 'rvm notes'
+
+Installation of RVM in /home/evx/.rvm/ is almost complete:
+
+  * To start using RVM you need to run `source /home/evx/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+
+# evx,
+#
+#   Thank you for using RVM!
+#   I sincerely hope that RVM helps to make your life easier and more enjoyable!!!
+#
+# ~Wayne
+
+
+rvm 1.14.1 (stable) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+
+evx@evx-VirtualBox:~$ source /etc/profile.d/rvm.sh
+bash: /etc/profile.d/rvm.sh: No such file or directory
+evx@evx-VirtualBox:~$ rvm.sh
+rvm.sh: command not found
+                       
+evx@evx-VirtualBox:~$ sudo source /etc/profile.d/rvm.sh
+sudo: source: command not found
+evx@evx-VirtualBox:~$ cd /etc/
+evx@evx-VirtualBox:/etc$ cd p
+pam.d/     perl/      pm/        ppp/       pulse/     python2.7/ 
+pcmcia/    pkcs11/    polkit-1/  profile.d/ python/    
+evx@evx-VirtualBox:/etc$ cd profile.d/
+evx@evx-VirtualBox:/etc/profile.d$ ls
+bash_completion.sh
+evx@evx-VirtualBox:/etc/profile.d$ rvm.sh
+rvm.sh: command not found
+evx@evx-VirtualBox:/etc/profile.d$ cd ~
+
+evx@evx-VirtualBox:~$ source /home/evx/.rvm/scripts/rvm
+
+evx@evx-VirtualBox:~$ rvm requirements
+
+Requirements for Linux ( DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=12.04
+DISTRIB_CODENAME=precise
+DISTRIB_DESCRIPTION="Ubuntu 12.04 LTS" )
+
+NOTE: 'ruby' represents Matz's Ruby Interpreter (MRI) (1.8.X, 1.9.X)
+             This is the *original* / standard Ruby Language Interpreter
+      'ree'  represents Ruby Enterprise Edition
+      'rbx'  represents Rubinius
+
+bash >= 4.1 required
+curl is required
+git is required (>= 1.7 for ruby-head)
+patch is required (for 1.8 rubies and some ruby-head's).
+
+To install rbx and/or Ruby 1.9 head (MRI) (eg. 1.9.2-head),
+then you must install and use rvm 1.8.7 first.
+
+Additional Dependencies:
+# For Ruby / Ruby HEAD (MRI, Rubinius, & REE), install the following:
+  ruby: /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
+
+# For JRuby, install the following:
+  jruby: /usr/bin/apt-get install curl g++ openjdk-6-jre-headless
+  jruby-head: /usr/bin/apt-get install ant openjdk-6-jdk
+
+# For IronRuby, install the following:
+  ironruby: /usr/bin/apt-get install curl mono-2.0-devel
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+rvm install 1.9.3
+evx@evx-VirtualBox:~$ rvm install 1.9.3
+Fetching yaml-0.1.4.tar.gz to /home/evx/.rvm/archives
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  460k  100  460k    0     0   282k      0  0:00:01  0:00:01 --:--:--  322k
+Extracting yaml-0.1.4.tar.gz to /home/evx/.rvm/src
+Configuring yaml in /home/evx/.rvm/src/yaml-0.1.4.
+Compiling yaml in /home/evx/.rvm/src/yaml-0.1.4.
+Installing yaml to /home/evx/.rvm/usr
+Installing Ruby from source to: /home/evx/.rvm/rubies/ruby-1.9.3-p194, this may take a while depending on your cpu(s)...
+
+ruby-1.9.3-p194 - #fetching 
+ruby-1.9.3-p194 - #downloading ruby-1.9.3-p194, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 9610k  100 9610k    0     0   137k      0  0:01:09  0:01:09 --:--:-- 1036k
+ruby-1.9.3-p194 - #extracting ruby-1.9.3-p194 to /home/evx/.rvm/src/ruby-1.9.3-p194
+ruby-1.9.3-p194 - #extracted to /home/evx/.rvm/src/ruby-1.9.3-p194
+ruby-1.9.3-p194 - #configuring 
+ruby-1.9.3-p194 - #compiling 
+ruby-1.9.3-p194 - #installing 
+Retrieving rubygems-1.8.24
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  371k  100  371k    0     0  1001k      0 --:--:-- --:--:-- --:--:-- 1865k
+Extracting rubygems-1.8.24 ...
+Removing old Rubygems files...
+Installing rubygems-1.8.24 for ruby-1.9.3-p194 ...
+Installation of rubygems completed successfully.
+ruby-1.9.3-p194 - adjusting #shebangs for (gem irb erb ri rdoc testrb rake).
+ruby-1.9.3-p194 - #importing default gemsets (/home/evx/.rvm/gemsets/)
+Install of ruby-1.9.3-p194 - #complete 
+evx@evx-VirtualBox:~$ 
+evx@evx-VirtualBox:~$ rvm use 1.9.3 --default
+Using /home/evx/.rvm/gems/ruby-1.9.3-p194
+evx@evx-VirtualBox:~$ 
+
+sudo apt-get install rubygems
+
+sudo gem install rails
+
+
