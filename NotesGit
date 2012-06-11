@@ -1,0 +1,10 @@
+		# Agent admitted failure to sign using the key.
+		Permission denied (publickey).
+		evx001@evx001-VirtlBox:~/xXx$ ssh-add ~/.ssh/id_rsa
+		Identity added: /home/evx001/.ssh/id_rsa (/home/evx001/.ssh/id_rsa)
+		evx001@evx001-VirtlBox:~/xXx$ ssh -T git@github.com
+		Hi evx001! You've successfully authenticated, but GitHub does not provide shell access.
+		evx001@evx001-VirtlBox:~/xXx$ 
+
+
+ssh-add ~/.ssh/id_rsa
