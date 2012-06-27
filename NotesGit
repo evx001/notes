@@ -1,3 +1,10 @@
+A git repository contains the all history at all time.
+So when you are cloning a repository, you are cloning it with its full history, and then, you can make a branch from whatever commit you want:
+
+ $ git checkout -b aNewBranch SHA1
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 		# Agent admitted failure to sign using the key.
 		Permission denied (publickey).
 		evx001@evx001-VirtlBox:~/xXx$ ssh-add ~/.ssh/id_rsa
@@ -8,3 +15,6 @@
 
 
 ssh-add ~/.ssh/id_rsa
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

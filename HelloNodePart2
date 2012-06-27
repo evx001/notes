@@ -1,0 +1,28 @@
+//var server = http.createServer();
+//
+//
+
+var http - require('http');
+
+// anything that we want loaded we will require 
+// EventEmitter object so it can connect to objects 
+http.createServer(function (request, response){
+
+
+server.on('request', function (request, reponse){
+
+
+	responce.writeHead(200, {'Content-Type': 'text/plain});
+	responce.write('asdsad');
+	responce.end('Hello World\n');
+server.once('close, function(){
+  
+  
+  
+ server.on('request', function (request, reponse) {...}){ 
+  
+  
+  
+  console.log('Server running ');
+
+

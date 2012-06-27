@@ -1,0 +1,36 @@
+intro Node.js
+
+	Roman Shtykman 
+	@defunctzombie
+	
+	JS everywhere 
+	event based
+		non blocking 
+	great module 
+		installs packages locally 
+	Node is growing 
+	
+	EventEmitter
+	
+	instance.on('some event'), function(result) {...});
+	
+	modules 
+		NodeJS COre
+		
+		use npm to install extra modules
+		
+		file = module
+		
+		
+		module.exports
+		require
+		
+		module docs
+		npm node package module 
+		
+		package.json
+		npm init
+		
+		share the goodies
+		
+		

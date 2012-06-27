@@ -1,0 +1,30 @@
+Avi-Lec2a 29:00-
+
+
+Models are powerd by ActiveRecord
+Controllers are powered by ActionController
+Views are powered by ActionView (made up of helpers)
+
+# @mixtape = Mixtape.find(params[:id]) in mixtapes_controller.rb
+#   the query string parameters (key/value pairs aka hashes) are soaked up by params object so they aren't exposed in the browser. 
+
+Rails stuffs URL parameters in the params object.
+
+Params (a rails object) is made available in all the controllers
+The params hash will contain keys and their associated values. 
+    {"action"=>"show", "controller"=>"mixtapes", "id"=>"1"}
+    
+    Mixtape = Mixtape(id: integer, name: string, created_at: datetime, updated_at: datetime)
+
+    the route 
+      /mixtapes/:id
+        whatever the user puts into :id 
+          will get globbed into the params hash under :id
+          
+          { these curly braces are for hashes}
+          
+          
+      
+      mixtape GET    /mixtapes/:id(.:format)      mixtapes#show
+    
+    

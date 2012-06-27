@@ -1,0 +1,131 @@
+Well Grounded Nuby
+
+David BLack
+
+Lead Dev Cyrus Inovation 
+
+Ruby central founder 
+
+Twitter @david_a_black 
+
+ruby-versions.net 
+
+
+
+everything evaluates to an object
+
+	so it in irb, 
+		the returned 'nil'
+		is the object even with a failed if statement 
+		
+	Method def eval to nil 
+		rubinius reduce to a method object 
+		
+	an empty class def resolves to ni; 
+	
+	even a class def body 
+
+It's all about sending messages to objects 
+	via the . 
+		
+	3.+2
+	5.*3
+	a.[](2)
+	a[2]=(3) is a.[2,3]
+	
+	
+	you 
+	
+Case statement 
+	
+	=== is really calling the triple equal object
+	===!
+	threequaled 
+	case equality behaviour defined by 
+	case + when 
+	=== default is == unless redefined 
+	
+	its all about sending messages to to objects 
+	
+	objects resolve messages to objects 
+	
+	objects don't have methods 
+		methods live in classes and modules 
+		singleton class 
+		mixed in modules 
+		its class 
+		modules into class 
+		then superclass module 
+		then superclass class 
+		object 
+		Kernel (module mixed into Object)
+		BasicObject (not even an inspect object)
+		
+	you have to ask for the singleton class or it won't be created. 
+	sclass = .singleton_class
+	def 
+	class << 
+	
+	Super follows next up also 
+	
+	Modules are searched at reversed order of inclusion
+	extend on an object, is just for that object
+	
+	Classes and Modules are objects 
+		covers most questions 
+		you can send messages 
+		store them 
+		there is a class .new 
+		store in array 
+		create with new
+		can be assigned local variables 
+		
+		classes have instance variables 
+			things can be done on instances of that class that has no effect on other instances of that class 
+			Classes that derive from other classes share their int
+			Class variables a more pemiscuous 
+			
+			Class is and instance of class Class 
+			class Class is a subclass of the class module 
+			
+			circulariy 
+				class of class is itself 
+				instance of a class is a class 
+				
+			.puts?
+		
+		There is always a self and that will be the reciever unless 
+		
+		Self owns instance variables 
+			it belongs to self
+			what ever is self at moment 
+			
+			value of self  can change
+				in class def it becomes class 
+				method def becomes the object that will call method 
+				
+			
+			Self at top level is main 
+			
+			main is at the top an entry point 
+		
+		instance_eval
+			self is string inside a block 
+		
+		?call by value or by reference
+		
+		you can freeze an object 
+			and it will error if you try to change it. 
+			
+		to freeze an array do through a block  .each do | | 
+		
+		every variable that references an object 
+		
+	True 
+		false and nil are all that is false   
+		
+		empty is true 
+		zero is true 
+		
+http://www.slideshare.net/dablack/wgnuby
+
